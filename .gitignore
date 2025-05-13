@@ -1,0 +1,21 @@
+# Ignore node modules
+**/node_modules/
+
+# Ignore env files
+**/.env
+**/.env.*
+
+# Ignore build artifacts
+**/dist/
+**/build/
+
+# Ignore system and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ignore logs and temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
