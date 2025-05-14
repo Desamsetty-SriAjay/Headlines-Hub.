@@ -32,7 +32,7 @@ const Home = () => {
       const results = {};
       for (const key in sources) {
         try {
-          const res = await fetch(`http://localhost:5000/api/news/${key}`);
+          const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/news/${key}`);
           const data = await res.json();
           results[key] = data;
         } catch (err) {
