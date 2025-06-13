@@ -44,10 +44,9 @@ const saveNoteToDB = async (noteText) => {
   }
 };
 
-
   const deleteNoteFromDB = async (id) => {
     try {
-      await fetch(`${import.meta.env.VITE_BACKEND_URL}/${id}`, {
+      await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/notes/${id}`, {
         method: 'DELETE',
       });
       setNotes(notes.filter((note) => note._id !== id));
@@ -86,7 +85,7 @@ const saveNoteToDB = async (noteText) => {
       </button>
 
       <button
-        className=" ml-2 px-4 py-2 bg-zinc-600 text-white rounded hover:bg-Zinc-700 cursor-pointer"
+        className="ml-2 px-4 py-2 bg-zinc-600 text-white rounded hover:bg-gray-700 cursor-pointer"
         onClick={() => {
           notes.forEach((note) => {
             if (!note._id && note.content.trim() !== '') {
